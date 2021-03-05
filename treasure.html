@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Treasure Hunting</title>
+    <style>
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            flex-wrap: wrap;
+
+        }
+
+        .flex-container>div {
+            /*div children of the flex container*/
+            background-color: rgb(247, 229, 229);
+            margin: 5px;
+            padding: 20px;
+            font-size: 30px;
+            border-radius: 10px;
+        }
+
+        #heading {
+            text-align: center;
+            color: brown;
+        }
+
+        .instruc {
+            text-align: center;
+
+        }
+
+        .instruc p {
+            font-weight: 800;
+            font-size: 20px;
+        }
+        .gameField{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+           
+            
+        }
+        .row{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+
+        }
+        img{
+            width: 100px;
+            height: 100px;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 600px) {
+            .flex-container {
+                flex-direction: column;
+            }
+
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <div class="instruc">
+        <h1 id="heading">Find the Treasure Jeevan Bodigam</h1>
+        <p>Click on the squares to find the treasure</p>
+    </div>
+    <div class="flex-container">
+        <div id="clicks">
+            Number of clicks is zero
+        </div>
+        <div id="distance">
+            Distance is unknown
+        </div>
+    </div>
+    <hr>
+    <div class="gameField">
+        <div class="row">
+            <div>
+                <img src="treasure/dusty3.jpg" alt="Treasure Image">
+            </div>
+            <div>
+                <img src="treasure/dusty3.jpg" alt="Treasure Image">
+            </div>
+            <div>
+                <img src="treasure/dusty3.jpg" alt="Treasure Image">
+            </div>
+            <div>
+                <img src="treasure/dusty3.jpg" alt="Treasure Image">
+            </div>
+            <div>
+                <img src="treasure/dusty3.jpg" alt="Treasure Image">
+            </div>
+        </div>
+        <div class="row">
+            <div>
+                <img src="treasure/dusty3.jpg" alt="Treasure Image">
+            </div>
+            <div>
+                <img src="treasure/dusty3.jpg" alt="Treasure Image">
+            </div>
+            <div>
+                <img src="treasure/dusty3.jpg" alt="Treasure Image">
+            </div>
+            <div>
+                <img src="treasure/dusty3.jpg" alt="Treasure Image">
+            </div>
+            <div>
+                <img src="treasure/dusty3.jpg" alt="Treasure Image">
+            </div>
+        </div>
+        <div class="row">
+            <div>
+                <img src="treasure/dusty3.jpg" alt="Treasure Image">
+            </div>
+            <div>
+                <img src="treasure/dusty3.jpg" alt="Treasure Image">
+            </div>
+            <div>
+                <img src="treasure/dusty3.jpg" alt="Treasure Image">
+            </div>
+            <div>
+                <img src="treasure/dusty3.jpg" alt="Treasure Image">
+            </div>
+            <div>
+                <img src="treasure/dusty3.jpg" alt="Treasure Image">
+            </div>
+        </div>
+        <div class="row">
+            <div>
+                <img src="treasure/dusty3.jpg" alt="Treasure Image">
+            </div>
+            <div>
+                <img src="treasure/dusty3.jpg" alt="Treasure Image">
+            </div>
+            <div>
+                <img src="treasure/dusty3.jpg" alt="Treasure Image">
+            </div>
+            <div>
+                <img src="treasure/dusty3.jpg" alt="Treasure Image">
+            </div>
+            <div>
+                <img src="treasure/dusty3.jpg" alt="Treasure Image">
+            </div>
+        </div>
+        <div class="row">
+            <div>
+                <img src="treasure/dusty3.jpg" alt="">
+            </div>
+            <div>
+                <img src="treasure/dusty3.jpg" alt="">
+            </div>
+            <div>
+                <img src="treasure/dusty3.jpg" alt="">
+            </div>
+            <div>
+                <img src="treasure/dusty3.jpg" alt="">
+            </div>
+            <div>
+                <img src="treasure/dusty3.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
