@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html> <head>
+    <title>
+        Listy List
+    </title> <style>
+    .flex-container {
+      display: flex;  flex-direction:row;
+      background-color: red;
+  }
+
+.flex-container > div {  /*div children of the flex container*/
+  background-color: #f1f1f1; 
+  margin: 10px;  padding: 20px;  font-size: 30px;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) { 
+	 .flex-container{
+		 flex-direction:column;
+		 background-color: green;
+	  }
+	}
+</style></head>
+
+
+
+<body>
+    <h1>
+        Jeevan Bodigam builds a list
+    </h1>
+    <input type="text" id="inputVal">
+		<div class="flex-container" id="target">
+		  <div class="listy">row item 1</div>   
+		  <div class="listy">row item 2</div>  
+		  <div class="listy">row item 3</div>  
+		</div>
+	<p> Press the button to create an new element of type div and then add it to the container.
+		</p>
+		<button onclick="makeNewDiv()">Add one</button>
+	
+	
+</body>
+<script>
+	function makeNewDiv(){
+        count=3;
+		/* make the div and its text */
+		let element = document.createElement("div")
+        console.log(document.getElementById("inputVal").value)
+        let inputText=document.getElementById("inputVal").value;
+		element.innerHTML = inputText
+       
+        element.setAttribute("class","listy")
+		// element.style.color = "orange"
+
+        var listyItems=document.getElementsByClassName('listy')
+        console.log(listyItems)
+        if(listyItems.length>9){
+            for(let i=0;i<listyItems.length;i++){
+                if(listyItems[i].value==inputText){
+                    listyItems[i].remove();
+                    console.log(listyItems[i])
+                }else{
+                    listyItems[0].remove();
+                }
+            }
+        }
+		/* add it to the container */
+		document.getElementById('target').appendChild(element)
+		
+	}
+</script>
+</html>	
