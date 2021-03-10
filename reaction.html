@@ -29,10 +29,13 @@
         var buttonTime = Date.now()
         console.log(buttonTime)
         function startTime() {
-            for (let i = 0; i < 4; i++) {
+            var randomNo = Math.floor(Math.random() * 10) + 2;
+            console.log(randomNo)
+            for (let i = 0; i < randomNo+1; i++) {
                 setTimeout(function () {
                     document.getElementById('countdown').innerHTML = i;
-                }, (3 - i) * 3000)
+                    console.log(i)
+                }, (randomNo - i) * 1000)
             }
 
             setTimeout(() => {

@@ -71,7 +71,8 @@
                     console.log(i)
                     console.log(listyItems[i])
                 } else {
-                    listyItems[0].remove();
+                    let randomNo=Math.floor(Math.random()*listyItems.length) //will start from 0 to length of listyItems
+                    listyItems[randomNo].remove();
                 }
                 i++;
             }
