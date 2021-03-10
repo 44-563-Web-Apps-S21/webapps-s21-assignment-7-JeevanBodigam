@@ -184,25 +184,20 @@
             "image16", "image17", "image18", "image19", "image20", "image21", "image22", "image23",
             "image24"]
         var clickCount = 0
-        var treasureLocation = Math.floor(Math.random() * ids.length)
-        // var treasureLocation=18
-        console.log(treasureLocation)
 
-        const newGame = () => {
-            clickCount = 0;
-            treasureLocation = Math.floor(Math.random() * ids.length)
-        }
+        var treasureLocation = 18
+        console.log(treasureLocation)
         const makeGuess = (position) => {
             let imgId;
             for (let i = 0; i < ids.length; i++) {
                 if (i == (position)) {
                     imgId = ids[i];
-                     break;
+                    break;
                 }
             }
             clickCount++;
             let imgInfo = document.getElementById(imgId);
-            if ((position + 1) ==
+            if ((position) ==
                 (treasureLocation)) {
                 imgInfo.src = "treasure/jewel.jpg"
             }
@@ -214,8 +209,8 @@
         }
 
         const distance = (pos, treaureLoc) => {
-            var horizontalDis = Math.abs(Math.floor(treasureLocation / 5) - Math.floor(pos / 5))
-            var verticalDis = Math.abs(treasureLocation % 5 - pos % 5)
+            var horizontalDis = Math.abs(Math.floor(treaureLoc / 5) - Math.floor(pos / 5))
+            var verticalDis = Math.abs(treaureLoc % 5 - pos % 5)
             console.log(horizontalDis, verticalDis)
 
             return verticalDis + horizontalDis
