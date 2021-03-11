@@ -184,20 +184,25 @@
             "image16", "image17", "image18", "image19", "image20", "image21", "image22", "image23",
             "image24"]
         var clickCount = 0
-
-        var treasureLocation = 18
+        var treasureLocation = Math.floor(Math.random() * ids.length)
+        // var treasureLocation=18
         console.log(treasureLocation)
+
+        const newGame = () => {
+            clickCount = 0;
+            treasureLocation = Math.floor(Math.random() * ids.length)
+        }
         const makeGuess = (position) => {
             let imgId;
             for (let i = 0; i < ids.length; i++) {
                 if (i == (position)) {
                     imgId = ids[i];
-                    break;
+                     break;
                 }
             }
             clickCount++;
             let imgInfo = document.getElementById(imgId);
-            if ((position) ==
+            if ((position + 1) ==
                 (treasureLocation)) {
                 imgInfo.src = "treasure/jewel.jpg"
             }
